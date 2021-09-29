@@ -6,8 +6,8 @@ function suma(){
     resultado = 10; 
     return resultado;
 }
-let nombre = "Luis";
-let apellido = "Navas";
+let nombre1 = "Luis";
+let apellido4 = "Navas";
 let edad = 48;
 let llueve = true;
 let participantes=[
@@ -33,3 +33,17 @@ btn-primary'>Go somewhere</a>
         );
 }
 render();
+/**
+let texto = "me gusta programar  durante todas las horas";
+let nombre2 = "LUS NAVAS"
+let saludo = ` <h3>holas soys: ${nombre} y ${TEXTO}</h3>`
+let contenedor = document.getElementById(`root`);
+contenedor.innerHTML+=saludo;
+**/
+
+function nombreCompleto(nombre3=" ",apellido=" "){
+    return`${nombre} ${apellido}`
+
+}
+console.log(nombreCompleto("marcos","chura"));
+console.log(nombreCompleto("ivana"));

@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{Component} from 'react'
+ 
+class App extends Component{
+  constructor(props){
+    super(props)
+    this.state={
+      newTask:"Aca va a ir el estadp cuando lo cambienmos",
+      task:["avisar que vamos a salir "]
+    };
+    this.handleTaskChange=this.handleTaskChange.bind(this);
+  }
+  handleTaskChange(evt){
+    this.setState({newTask:evt.target.value})
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+  render(){
+    return (
+    <div className="container bg-dark">
+      <div className="row">
+        <h1 className="text-center text-white">Hola Mundo!!</h1>
+        <span ></span>
+        <div className="d-flex justify-content-center">
+          <input 
+          onChange={this.handleTaskChange} 
+          type="text" 
+          className="w-25" />
+        </div>
+        <h2 className= "text-white tenxt-center">{this.state.newTask}</h2>
+        <ul>{
+          this.state.task.map((t,i)=><li className= "text-white">{t}</li >)
+          
+          }
+
+        </ul>
+      </div>
     </div>
   );
+  }
 }
-
+ 
 export default App;

@@ -28,7 +28,7 @@ class App extends Component{
         </div>
         <h2 className= "text-white tenxt-center">{this.state.newTask}</h2>
         <ul>{
-          this.state.task.map((t,i)=><li className= "text-white">{t}</li >)
+          this.state.task.map((t,i)=><li className= "text-white">{t,i}</li >)
           
           }
 
